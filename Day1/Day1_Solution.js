@@ -1,5 +1,5 @@
 /*
-Find entries in the input file that add up to 2020 and multiply them together
+https://adventofcode.com/2020/day/1
  */
 
 // Read Input file and convert all entries to integers
