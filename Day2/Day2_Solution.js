@@ -4,7 +4,8 @@ https://adventofcode.com/2020/day/2
 
 // Read Input file
 const fs = require('fs')
-const input = fs.readFileSync('Day2_Input.txt', 'utf-8')
+const path = require('path')
+const input = fs.readFileSync(path.resolve(__dirname, 'Day2_Input.txt'), 'utf-8')
   .split('\r\n')
 
 /*

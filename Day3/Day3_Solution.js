@@ -3,7 +3,8 @@ https://adventofcode.com/2020/day/3
  */
 
 const fs = require('fs')
-const input = fs.readFileSync('Day3_Input.txt', 'utf-8').split('\r\n')
+const path = require('path')
+const input = fs.readFileSync(path.resolve(__dirname, 'Day3_Input.txt'), 'utf-8').split('\r\n')
 
 /**
  * Counts trees on the path according to the parameters
