@@ -3,9 +3,9 @@ https://adventofcode.com/2020/day/2
 */
 
 // Read Input file
-const fs = require("fs")
-const input = fs.readFileSync("Day2_Input.txt", "utf-8")
-    .split("\r\n")
+const fs = require('fs')
+const input = fs.readFileSync('Day2_Input.txt', 'utf-8')
+  .split('\r\n')
 
 /*
 Helper Functions
@@ -23,11 +23,11 @@ Helper Functions
  * @param line - A single line from the input file
  * @returns {string[]} - The list of components
  */
-function parseLine(line) {
-    return line
-        .replace("-", " ")
-        .replace(": ", " ")
-        .split(" ")
+function parseLine (line) {
+  return line
+    .replace('-', ' ')
+    .replace(': ', ' ')
+    .split(' ')
 }
 
 /**
@@ -37,11 +37,11 @@ function parseLine(line) {
  * @param symbol - Symbol that is searched for
  * @returns {*} - Number of occurrences
  */
-function countChar(string, symbol) {
-    return string
-        .split("")
-        .filter(char => char === symbol)
-        .length
+function countChar (string, symbol) {
+  return string
+    .split('')
+    .filter(char => char === symbol)
+    .length
 }
 
 /**
@@ -55,8 +55,8 @@ function countChar(string, symbol) {
  * @returns {boolean} - Whether the password is valid
  */
 function validatePasswordOld (min, max, symbol, password) {
-    let numberOfChars = countChar(password, symbol)
-    return (min <= numberOfChars && numberOfChars <= max)
+  const numberOfChars = countChar(password, symbol)
+  return (min <= numberOfChars && numberOfChars <= max)
 }
 
 /**
@@ -70,12 +70,12 @@ function validatePasswordOld (min, max, symbol, password) {
  * @returns {boolean} Whether the password is valid
  */
 function validatePasswordNew (first, second, symbol, password) {
-    // Positions are offset by one
-    let firstPosEqual = (password[first-1] === symbol)
-    let secondPosEqual = (password[second-1] === symbol)
+  // Positions are offset by one
+  const firstPosEqual = (password[first - 1] === symbol)
+  const secondPosEqual = (password[second - 1] === symbol)
 
-    // Logical XOR
-    return (!firstPosEqual && secondPosEqual) || (firstPosEqual && !secondPosEqual)
+  // Logical XOR
+  return (!firstPosEqual && secondPosEqual) || (firstPosEqual && !secondPosEqual)
 }
 
 /*
@@ -85,19 +85,17 @@ Solution Code
 let counterOld = 0
 let counterNew = 0
 
-for (let line of input) {
-    let parsedLine = parseLine(line)
+for (const line of input) {
+  const parsedLine = parseLine(line)
 
-    let firstParam = parseInt(parsedLine[0])
-    let secondParam = parseInt(parsedLine[1])
-    let symbol = parsedLine[2]
-    let password = parsedLine[3]
+  const firstParam = parseInt(parsedLine[0])
+  const secondParam = parseInt(parsedLine[1])
+  const symbol = parsedLine[2]
+  const password = parsedLine[3]
 
-    if (validatePasswordOld(firstParam, secondParam, symbol, password))
-        counterOld += 1
+  if (validatePasswordOld(firstParam, secondParam, symbol, password)) { counterOld += 1 }
 
-    if (validatePasswordNew(firstParam, secondParam, symbol, password))
-        counterNew += 1
+  if (validatePasswordNew(firstParam, secondParam, symbol, password)) { counterNew += 1 }
 }
 
 console.log(`Number of correct OLD-passwords: ${counterOld}`)
