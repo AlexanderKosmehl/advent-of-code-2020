@@ -33,12 +33,8 @@ function checkPassportString (passportString) {
     const strippedField = field.replace(/(?<=(...)):.*/, '')
     if (strippedField in passportValidation) {
       passportValidation[strippedField] = true
-    } else {
-      console.log(strippedField)
     }
   }
-
-  if (passportFields.length > 8) return false
 
   // Checks all fields in the validation object
   // Returns false if any props besides cid are false and true otherwise
