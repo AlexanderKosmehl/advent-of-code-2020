@@ -11,7 +11,7 @@ const input = fs.readFileSync(path.resolve(__dirname, 'Day4_Input.txt'), 'utf-8'
 */
 
 /**
- * Checks whether the given passport String is valid
+ * Checks whether the given passport contains all required fields
  * @param {string} passportString
  * @returns {boolean}
  */
