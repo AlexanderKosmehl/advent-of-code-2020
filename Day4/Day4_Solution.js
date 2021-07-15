@@ -44,6 +44,11 @@ function checkPassportString (passportString) {
   return true
 }
 
+/**
+ * Validates a given string using the rules from the task.
+ * @param {string} passportString
+ * @returns {boolean}
+ */
 function validatePassportString (passportString) {
   // Birth Year       four digits; at least 1920 and at most 2002.
   const birthYearMatch = passportString.match(/(?<=byr:)\d{4}(?!\w)/)
