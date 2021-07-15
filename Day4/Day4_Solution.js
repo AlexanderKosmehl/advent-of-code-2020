@@ -55,4 +55,4 @@ function checkPassportString (passportString) {
 // Splits input into seperate passports and cleans them
 const inputLines = input.split('\r\n\r\n').map(line => line.replace(/\r\n/g, ' '))
 
-console.log(inputLines.filter(checkPassportString).length)
+console.log('Solution to part 1:', inputLines.filter(checkPassportString).length)
