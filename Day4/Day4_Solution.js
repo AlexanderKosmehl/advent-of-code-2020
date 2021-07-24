@@ -109,3 +109,8 @@ const inputLines = input.split('\r\n\r\n').map(line => line.replace(/\r\n/g, ' '
 
 console.log('Solution to part 1:', inputLines.filter(checkPassportString).length)
 console.log('Solution to part 2:', inputLines.filter(validatePassportString).length)
+
+module.exports = {
+  checkPassportString,
+  validatePassportString
+}
