@@ -1,5 +1,5 @@
 const { expect, describe, test } = require('@jest/globals')
-const { checkPassportString, validatePassportString } = require('./Day4_Solution')
+const { checkPassportString, validatePassportString } = require('./Day4_Helper')
 
 describe('Check passport strings', () => {
   test('Identify correct strings', () => {
