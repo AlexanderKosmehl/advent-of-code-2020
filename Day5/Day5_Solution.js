@@ -18,3 +18,10 @@ let max = seatIDs[0]
 for (const seatID of seatIDs) {
   if (seatID > max) max = seatID
 }
+
+console.log('Solution to part 1:', max)
+
+// Iterates through all possible IDs and prints the missing one
+for (let possibleID = Math.min(...seatIDs); possibleID < Math.max(...seatIDs); possibleID++) {
+  if (!seatIDs.includes(possibleID)) console.log('Solution to part 2:', possibleID)
+}
