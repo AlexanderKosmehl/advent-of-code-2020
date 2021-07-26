@@ -4,7 +4,7 @@ const columns = 8
 /**
  * Calculates a seats row based on a given rowString
  * @param {string} rowString
- * @returns {number}
+ * @returns {number} rowNumber
  */
 function calculateRow (rowString) {
   let low = 0
@@ -22,7 +22,7 @@ function calculateRow (rowString) {
 /**
  * Calculates a seats row based on a given rowString
  * @param {string} columnString
- * @returns {number}
+ * @returns {number} columnNumber
  */
 function calculateColumn (columnString) {
   let low = 0
@@ -40,7 +40,7 @@ function calculateColumn (columnString) {
 /**
  * Calculates a seats ID based on the seatString on a passport
  * @param {string} seatString
- * @returns {number}
+ * @returns {number} seatID
  */
 function calculateSeatID (seatString) {
   const rowString = seatString.substring(0, 8)
