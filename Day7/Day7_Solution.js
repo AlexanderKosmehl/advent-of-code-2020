@@ -2,11 +2,13 @@
     https://adventofcode.com/2020/day/6
 */
 
-const path = require('path')
-const fs = require('fs')
-const input = fs.readFileSync(path.resolve(__dirname, 'Day7_Input.txt'), 'utf-8')
-const { _ } = require('./Day7_Helper')
+const { RuleModel } = require('./Day7_Helper')
 
 /*
   Solution Code
 */
+
+const solutionRuleModel = new RuleModel('Day7_Input.txt')
+
+console.log('Solution to part 1: ', solutionRuleModel.getAmountOfContainersContaining('shiny gold'))
+console.log('Solution to part 2: ', solutionRuleModel.getAmountOfSubContainers('shiny gold'))
