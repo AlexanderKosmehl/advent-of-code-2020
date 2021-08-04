@@ -5,5 +5,5 @@
 const { BootCodeInterpreter } = require('./Day8_Helper')
 const bootCodeInterpreter = new BootCodeInterpreter('Day8_Input.txt')
 
-console.log('Part 1 solution: ', bootCodeInterpreter.executeBootCode().accumulator)
-console.log('Part 2 solution: ', bootCodeInterpreter.fixLoop().accumulator)
+console.log('Solution to part 1: ', bootCodeInterpreter.executeBootCode().accumulator)
+console.log('Solution to part 2: ', bootCodeInterpreter.fixLoop().accumulator)
