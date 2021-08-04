@@ -1,5 +1,5 @@
 /*
-    https://adventofcode.com/2020/day/6
+    https://adventofcode.com/2020/day/7
 */
 
 const { RuleModel } = require('./Day7_Helper')
