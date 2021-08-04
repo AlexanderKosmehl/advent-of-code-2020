@@ -3,11 +3,6 @@
 */
 
 const { RuleModel } = require('./Day7_Helper')
-
-/*
-  Solution Code
-*/
-
 const solutionRuleModel = new RuleModel('Day7_Input.txt')
 
 console.log('Solution to part 1: ', solutionRuleModel.getAmountOfContainersContaining('shiny gold'))
